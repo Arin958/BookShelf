@@ -36,7 +36,6 @@ export default function Shelf() {
         </div>
       </div>
 
-      {/* Bookshelf Content - We'll add Redux tasks here later */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 text-center">
           <p className="text-gray-600 dark:text-gray-400">
