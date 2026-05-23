@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 
- const ThemeContext = createContext();
+const ThemeContext = createContext(null);
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
@@ -9,11 +9,14 @@ export const ThemeProvider = ({ children }) => {
   });
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prevTheme) =>
+      prevTheme === "light" ? "dark" : "light"
+    );
   };
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
+
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
@@ -27,3 +30,5 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+export default ThemeContext;
