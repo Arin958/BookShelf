@@ -36,7 +36,6 @@ export default function AuthProvider({ children }) {
     if (foundUser) {
       setUser(foundUser);
       setIsAuthenticated(true);
-      // ✅ Save to localStorage
       localStorage.setItem("user", JSON.stringify(foundUser));
       setLoading(false);
       return true;
