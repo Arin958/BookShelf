@@ -23,9 +23,8 @@ export default function AuthProvider({ children }) {
     },
   ];
 
-  const login = (email) => {
-    // Find matching dummy user
-    const foundUser = dummyUsers.find((user) => user.email === email);
+  const login = async (email) => {
+    const foundUser = await dummyUsers.find((user) => user.email === email);
 
     if (foundUser) {
       setUser(foundUser);
