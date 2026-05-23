@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from '../store/slices/booksSlice';
+import { setFilter } from '../../store/slices/bookSlice';
 
 const filters = [
-  { value: 'all', label: 'All Books', emoji: '📚' },
-  { value: 'want', label: 'Want to Read', emoji: '📚' },
-  { value: 'reading', label: 'Currently Reading', emoji: '📖' },
-  { value: 'finished', label: 'Finished', emoji: '✅' },
+  { value: 'all', label: 'All Books', emoji: '' },
+  { value: 'want', label: 'Want to Read', emoji: '' },
+  { value: 'reading', label: 'Currently Reading', emoji: '' },
+  { value: 'finished', label: 'Finished', emoji: '' },
 ];
 
 export const BookFilters = () => {

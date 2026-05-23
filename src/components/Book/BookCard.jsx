@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { deleteBook, toggleBookStatus } from "../store/slices/booksSlice";
+import { deleteBook, toggleBookStatus } from "../../store/slices/bookSlice";
 
 const statusColors = {
   want: "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200",
@@ -8,9 +8,9 @@ const statusColors = {
 };
 
 const statusEmojis = {
-  want: "📚",
-  reading: "📖",
-  finished: "✅",
+  want: "",
+  reading: "",
+  finished: "",
 };
 
 export const BookCard = ({ book }) => {
