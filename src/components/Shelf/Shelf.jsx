@@ -80,16 +80,16 @@ export default function ShelfPage() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column - Add Book Form */}
+        
           <div className="lg:col-span-1">
             <AddBookForm />
           </div>
 
-          {/* Right Column - Books List */}
+   
           <div className="lg:col-span-2">
             <BookFilters />
 
-            {/* Loading State */}
+       
             {status === "loading" && (
               <div className="text-center py-12">
                 <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
@@ -99,14 +99,14 @@ export default function ShelfPage() {
               </div>
             )}
 
-            {/* Error State */}
+         
             {status === "failed" && (
               <div className="bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-200 p-4 rounded-lg mb-4">
                 Error: {error}
               </div>
             )}
 
-            {/* Empty State */}
+      
             {status === "succeeded" && filteredBooks.length === 0 && (
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 text-center">
                 <p className="text-gray-600 dark:text-gray-400 mb-2">
